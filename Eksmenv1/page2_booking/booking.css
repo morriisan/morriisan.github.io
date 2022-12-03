@@ -1,0 +1,300 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgba(251, 251, 251, 0.635);
+}
+/*---making the grid--*/
+.main_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10em;
+    padding-top: 4em;
+}
+.main_container > div{
+    padding: 1em;
+}
+.main-heading{
+    grid-column: 1/4;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    justify-self: center;
+    border-radius: 2px;
+    color: rgb(239, 162, 68);
+}
+.description-text{
+    grid-column: 1/3;
+    background-color:antiquewhite;
+    font-size: 1.2em;
+    line-height: 27px;
+}
+.reservation{
+    background-color: rgba(250, 235, 215, 0.636);
+}
+
+/*nested-grid*/
+form{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: auto;
+}
+form > div{
+    padding: 1em;
+    background: rgba(255, 0, 0, 0);
+    justify-self: center;
+}
+
+/*--box-span--*/
+.box_1, .box_3{
+    grid-column: 1/4;
+}
+.box_2, .box_4{
+    grid-column: 4/7;    
+}
+.order-box{
+    grid-column: 1/7;
+}
+.box_5{ 
+    grid-column: 1/3;  
+}
+.box_6{
+    grid-column: 3/5;  
+}
+.box_7{
+    grid-column: 5/7;
+}
+.box_6>input{
+    width: 75px;
+}
+
+input{
+    background-color:rgb(243, 218, 191);
+    color: black;
+    font-size: 15px;
+    padding: 1px;
+    width: 110px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+/*--Pop-up-submit--*/
+.order-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    padding: 10px 60px;
+    background-color: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 300px;
+}
+.popup{
+    width: 400px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: rgb(0, 0, 0);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    background: rgb(255, 189, 66);
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%)scale(1);
+}
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow:0 2px 5px black ;
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    color: #333;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow:0 5px 5px rgba(0, 0, 0, 0.122) ;
+}
+/*--Pop-up-submit--end--*/
+
+/*--Submit-info-nested-grid--*/
+.reservation{
+    background-color: rgba(250, 235, 215, 0.636);
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.footer>div{
+    background: red;
+}
+
+#full_page{
+    position: relative;
+    min-height: 100vh;
+  }
+
+
+/*----footer----*/
+.main-footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    color: black;
+    width: 100%;
+    position: relative;
+    }
+    
+    .main-footer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgb(201, 176, 35);
+    
+    }
+    .main-footer-container>div{
+    background: rgba(255, 0, 0, 0);
+    margin: 1em;
+    justify-self: center;
+    }
+    
+    .cafe-name-tid-footer{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+    }
+    .cafe-name{
+    font-size: 30px;
+    }
+    
+    @media screen and (max-width: 600px) {
+    .main-footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        color: black;
+        width: 100%;
+        position: relative;
+        
+    }
+    .main-footer-container>div{
+        background: rgba(255, 0, 0, 0);
+        margin: 1em;
+        grid-column: 1/4;
+        justify-self: center;
+    }
+    }
+    /*----footer-end---*/
+
+
+
+@media screen and (max-width: 1300px) {
+    .description-text{
+        margin-top: 1em;
+        grid-column: 1/4;
+    }
+    .reservation{
+        grid-column: 1/4;
+    }
+    .main-heading{
+        font-size:50px ;
+    }
+    .main_container{
+        padding:10em;
+        padding-top: 4em;    
+    }
+    .box_1, .box_3, .box_5{
+        justify-self: start;
+    }
+    .box_2, .box_4{
+        justify-self: end;
+    }
+    .box_7{
+        justify-self: end;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .description-text{
+        margin-top: 1em;
+        grid-column: 1/4;
+    }
+    .reservation{
+        grid-column: 1/4;
+    }
+    
+    .main_container{
+        padding:5em;
+        padding-top: 4em;    
+    }
+    .box_1, .box_3, .box_5{
+        justify-self: start;
+    }
+    .box_2, .box_4{
+        justify-self: end;
+    }
+    .box_7{
+        justify-self: end;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .description-text{
+        margin-top: 1em;
+        grid-column: 1/4;
+        line-height: 30px;
+        font-size: 1em;
+    }
+    .reservation{
+        grid-column: 1/4;
+        
+    }
+    .main-heading{
+        font-size:20px ;
+        width: 100%;
+
+    }
+    .main_container{
+        grid-gap: 1em;
+        padding:1.4em;
+        padding-top: 4em;    
+    }
+    .box_1, .box_2, .box_3, .box_4, .box_5, .box_6, .box_7{
+        grid-column: 1/7;
+        justify-self: center;
+    }
+    .box_5>input{
+        width: 100px;
+        
+    }
+    .open-popup{
+        visibility: visible;
+        top: 80%;
+        transform: translate(-50%,50%)scale(1);
+    }
+}

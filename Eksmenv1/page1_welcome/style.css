@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*--background-img-*/
+img.bg {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.bg{
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+
+.main-header{
+    border-bottom: solid 3px rgb(233, 203, 7);
+}
+
+/*--making-the-grid--*/
+.main_container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding: 2em;
+    padding-top: 8em;
+    grid-gap: 1em;
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+}
+.main_container > div{
+    padding: 1em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+/*first heading*/
+.welcome{
+    font-family: monospace;
+    font-size: 27px;
+    font-weight: bold;
+    background-color: rgba(179, 116, 0, 0.483);
+    border-radius: 10px;
+    width: 50%;
+    margin: auto
+    ;
+    
+}
+/*welcome text*/
+.welcome-item1{
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(179, 116, 0, 0.483);
+    border-radius: 10px;
+    width: 50%;
+    margin: auto
+}
+
+
+
+/*----footer----*/
+.main-footer{
+display: grid;
+grid-template-columns: 1fr;
+color: black;
+width: 100%;
+position: absolute;
+bottom: -20%;
+}
+
+.main-footer-container{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+background-color: rgb(201, 176, 35);
+
+}
+.main-footer-container>div{
+background: rgba(255, 0, 0, 0);
+margin: 1em;
+justify-self: center;
+}
+
+.cafe-name-tid-footer{
+text-align: center;
+font-family:'Courier New', Courier, monospace;
+font-weight: bold;
+font-size: 1.2em;
+color: black;
+}
+.cafe-name{
+font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+.main-footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    color: black;
+    width: 100%;
+    position: absolute;
+    bottom: -20%;
+    
+}
+.main-footer-container>div{
+    background: rgba(255, 0, 0, 0);
+    margin: 1em;
+    grid-column: 1/4;
+    justify-self: center;
+}
+}
+
+/*----footer-end---*/
+
+
+@media screen and (max-width: 600px) {
+.welcome{
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.welcome-item1 {
+    width: 100%;
+    font-size: 20px;
+    padding: 1px;
+}
+
+}
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./accessibility.css">
+    <link rel="stylesheet" href="../navbar/navBar.css">
+    <title>Accessibility page</title>
+</head>
+<body>
+<!--nav-->
+    <header class="main-header">
+        <nav class="nav">
+            <div class="logo">Café Mars</div>
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+
+        <div class="nav__link hide">
+            <a href="../page1_welcome/index.html">Welcome</a>
+            <a href="../page2_booking/booking.html">Booking</a>
+            <a href="../page3_cafe/cafe.html">Menu</a>
+            <a href="./accessibility.html">Accessibility</a>
+            <a href="../page5_topical/topical.html">Topical</a>
+        </div>
+        </nav>
+    </header>
+
+<!--content section-->
+<div class="content">
+    <div class="heading"><h1>Accessibility test</h1></div>
+        <div class="box_1">
+            We chose to use W3C Markup Validation Service and Wave Chrome Extension, two different and trustworthy tools to quality check and control our code. 
+            The W3C Service checks both the HTML and CSS code individually for mistakes and lays them all out for you. 
+            This makes it easy to clean up the code and fix minor faults. 
+            While the Wave extension checks for more design related mistakes when you combine HTML and CSS code. 
+            This gives more insight into the universal design like the contrast of the colors.
+        </div>
+
+        <div class="box_2">
+            While coding and designing this website we tried to have universal design in the back of our minds at all times. 
+            We attempted to make the website as simple and accessible as possible so anyone could navigate through it with ease. 
+            This meant we also aimed to make the information readily available and easy to find, which means we had to take all screen sizes in to account
+            and try to cater to all of them. This is why we used the @media rule in the CSS stylesheet so the webpage scales to all sizes.   
+        </div>
+    <!--pictures and picture-footer-->
+    <div class="heading_screenshot">
+        <h2>Screenshots</h2>
+    </div>
+    <div class="screenshots">
+        <div class="box_3">
+            <div class="screenshot_1">
+                <img class="picture" src="./bilder/w3.png" alt="">
+                <div class="description">W3C Markup Validation check for Booking page.</div>
+            </div>
+        </div>
+        <div class="box_4">
+            <div class="screenshot_2">
+                <img class="picture" src="./bilder/code.png" alt="">
+                <div class="description">Example of the @media rule command we utilized.</div>
+            </div>
+        </div>
+        <div class="box_5">
+            <div class="screenshot_3">
+                <img class="picture" src="./bilder//wave.png" alt="">
+                <div class="description">Wave extension check for Accessibility page.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<footer class="main-footer">
+    <div class="main-footer-container">
+        <div><h3 class="cafe-name">Café Mars</h3></div>
+        <div><h3 class="cafe-name-tid-footer">Addresse: mars<br>Åpningstider: Man-Lør 10:00-21:00<br>Mail: mars@gmail.com  Telf:42069420</h3></div>
+    </div>
+</footer>
+
+
+    <script src="../navbar/script.js"></script>
+    
+    
+</body>
+</html>

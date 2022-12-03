@@ -1,0 +1,120 @@
+/*We got the nav-bar from 
+https://dev.to/coderamrin/responsive-navbar-using-html-css-and-javascript-1jo4*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* nav styles */
+.bg-image{
+    background-image: url(../Bilder/header_bilde.jpg);
+    background-blend-mode: multiply;
+    background-size:cover;
+}
+.main-header{
+    background-image: url(../Bilder/header_bilde.jpg);
+    background-blend-mode: multiply;
+    background-size:cover;
+    padding: 2em;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo {
+    font-size: 3.0rem;
+    font-weight: 700;
+    color: rgb(255, 182, 47);
+    background-color:  #964b007e;
+    padding: 10px;
+    border-radius: 5%;
+    border-bottom:  rgb(233, 203, 7) 3px solid;
+    /*---we found the text border here:---https://www.youtube.com/watch?v=Hx1p1vQeHCg---*/
+    -webkit-text-stroke: 2px black;
+}
+
+/* 3 line menu button*/
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(254, 154, 4);
+}
+
+.nav__link {
+    position: fixed;
+    width: 94%;
+    top: 10rem;
+    left: 18px;
+    
+}
+.nav__link a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: rgb(233, 203, 7) 3px solid;
+    transition: 0.5s;
+    background: rgba(192, 132, 1, 0.87);
+    
+}
+
+.nav__link a:hover {
+    border-bottom: lightcoral 3px solid;
+    transform:scale(1.05);
+}
+
+/*hides the drop down menu*/
+.hide {
+    display: none;
+}
+  
+
+@media screen and (min-width: 965px) {
+    
+.nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    margin-right: 20px;
+    
+}
+
+/*full screen nav bar*/
+.nav__link a {
+    display: inline-block;
+    padding: 15px 20px;
+}
+
+.hamburger {
+    display: none;
+}
+
+}
+
+
+

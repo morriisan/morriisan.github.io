@@ -1,0 +1,148 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgb(255, 252, 252);
+  color: black;
+}
+
+
+/*MENU heading*/
+.section-header{
+  margin-top: 1em;
+  font-weight: bold;
+  color: rgb(239, 162, 68);
+  text-align: center;
+  font-size: 60px;
+}
+
+/*---menu---items*/
+/*---making grid*/
+.cafe-items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-direction: row;
+  width: 100%;
+}
+.cafe-item{
+  margin-bottom: 4em;
+  margin: auto;
+  padding: 2em;
+}
+
+/*menu type*/
+.cafe-item-title{
+  display: block;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+}
+
+.section-food{
+  padding: 5px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgb(233, 158, 18);
+}
+.section-food:hover{
+  background-color: rgba(161, 141, 28, 0.575);
+  transition: .8s;
+  padding: 8px;
+  border-radius: 8px;
+  padding-bottom: 10px;
+}
+
+/*food name*/
+.food-name{
+  font-weight: bold;
+}
+.food-ingredients{
+  font-size: small;
+  font-family:monospace;
+}
+
+/*allergens details*/
+.cafe-item-details{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.cafe-item-allergens{
+  flex-grow: 1;
+  color:black;
+  font-size: small;
+  font-family: monospace;
+}
+.img-primary{
+  width: 25px;
+  margin-top: 10px;
+}
+
+/*price*/
+.food-price{
+  align-items: center; 
+  font-size: 1em;
+  color: #185C00;
+  font-weight: bold;
+}
+/*---menu--item--end*/
+
+/*----footer----*/
+
+.main-footer{
+  display: grid;
+  grid-template-columns: 1fr;
+  color: black;
+  width: 100%;
+  position: absolute;
+  bottom: -20%;
+}
+
+.main-footer-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: rgb(201, 176, 35);
+  
+}
+.main-footer-container>div{
+  background: rgba(255, 0, 0, 0);
+  margin: 1em;
+  justify-self: center;
+}
+
+.cafe-name-tid-footer{
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: black;
+}
+.cafe-name{
+  font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  
+  .cafe-item{
+    grid-column: 1/4;
+    width: 80%;
+  }
+  .main-footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    color: black;
+    width: 100%;
+    position: relative;
+    
+  }
+  .main-footer-container>div{
+    background: rgba(255, 0, 0, 0);
+    margin: 1em;
+    grid-column: 1/4;
+    justify-self: center;
+  }
+}
+/*----footer-end---*/
