@@ -67,7 +67,7 @@ a{
 }
 
 .nav__link {
-    position: fixed;
+    position: absolute;
     width: 94%;
     top: 10rem;
     left: 18px;
