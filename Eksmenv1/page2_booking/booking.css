@@ -295,6 +295,6 @@ input{
     .open-popup{
         visibility: visible;
         top: 80%;
-        transform: translate(-50%,50%)scale(1);
+        transform: translate(-50%,200%)scale(1);
     }
 }
